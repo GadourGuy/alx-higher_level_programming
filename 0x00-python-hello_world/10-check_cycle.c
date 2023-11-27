@@ -5,7 +5,7 @@
 /**
  * check_cycle - checks if a singly linked list has a cycle
  * @list: list to be checked
- * 
+ *
  * Return: 1 or 0
  */
 
@@ -17,7 +17,7 @@ int check_cycle(listint_t *list)
 	{
 		new = new->next;
 		tmp = tmp->next->next;
-		if(new == tmp)
+		if (new == tmp)
 			return (1);
 	}
 	return (0);
