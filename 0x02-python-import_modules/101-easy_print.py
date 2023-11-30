@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-assert print("#pythoniscool") is None
+import easy_print
