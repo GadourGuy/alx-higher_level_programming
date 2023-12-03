@@ -10,7 +10,7 @@
 void print_python_list_info(PyObject *p)
 {
 	int size, mem, i;
-	pyobject *obj;
+	pyObject *obj;
 
 	size = Py_SIZE(p);
 	mem = ((PyListObject *)p)->allocated;
