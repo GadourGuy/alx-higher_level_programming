@@ -6,15 +6,8 @@ def roman_to_int(roman_string):
              'L': 50, 'C': 100, 'D': 500,
              'M': 1000}
     result = 0
-    for i in range(len(roman_string)):
-        if roman_string[i] in roman.keys():
-            if (i + 1) < len(roman_string):
-                if roman.get(roman_string[i]) < roman.get(roman_string[i+1]):
-                    big = roman.get(roman_string[i+1])
-                    result += (big - roman.get(roman_string[i]))
-                    i += 1
-                else:
-                    result += roman.get(roman_string[i])
-            else:
-                result += roman.get(roman_string[i])
+    num = 0
+    for i in reversed(roman_string):
+        num = roman[i]
+        result += num if result < num * 5 else -num
     return result
