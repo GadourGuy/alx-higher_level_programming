@@ -55,6 +55,8 @@ void print_python_bytes(PyObject *p)
     size = ((PyVarObject *)p)->ob_size;
     if (size > 10)
         size = 10;
+    else
+	    size++;
     printf("  first %d bytes: ", size);
     for (i = 0; i < size; i++)
     {
