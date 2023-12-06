@@ -1,15 +1,16 @@
 #include <Python.h>
 
-void print_python_list_info(PyObject *p);
+void print_python_list(PyObject *p);
+void print_python_bytes(PyObject *p);
 
 /**
- * print_python_list_info - print lists from python
+ * print_python_list - print lists from python
  * @p: list to be printed.
  *
  * Return: void
  */
 
-void print_python_list_info(PyObject *p)
+void print_python_list(PyObject *p)
 {
     Py_ssize_t size, alloc, i;
     PyObject *item;
@@ -31,7 +32,7 @@ void print_python_list_info(PyObject *p)
 
         if (!item)
         {
-		printf("Element %ld: %s\n", i, "Unknown");
+            printf("Element %ld: %s\n", i, "Unknown");
         }
         else
         {
@@ -41,13 +42,13 @@ void print_python_list_info(PyObject *p)
 }
 
 /**
- * print_python_bytes_info - print bytes objects from Python
+ * print_python_bytes - print bytes objects from Python
  * @p: bytes object to be printed.
  *
  * Return: void
  */
 
-void print_python_bytes_info(PyObject *p)
+void print_python_bytes(PyObject *p)
 {
     Py_ssize_t size, i;
     char *str;
@@ -72,4 +73,3 @@ void print_python_bytes_info(PyObject *p)
     }
     printf("\n");
 }
-
