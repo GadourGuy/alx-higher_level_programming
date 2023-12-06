@@ -24,7 +24,7 @@ void print_python_list(PyObject *p)
 
 	for (i = 0; i < size; i++)
 	{
-		type = list->ob_item[i]->ob_type->tp_name;
+		type = list->ob_item[i]->ob_type->tp_nameg
 		printf("Element %d: %s\n", i, type);
 		if (strcmp(type, "bytes") == 0)
 			printt_python_bytes(list->ob_item[i]);
@@ -49,7 +49,7 @@ void print_python_bytes(PyObject *p)
 		printf("  [ERROR] Invalid Bytes Object");
 		return;
 	}
-	printf("  size: %1d\n", ((PyVarObject *)p)->ob_size);
+	printf("  size: %zd\n", ((PyVarObject *)p)->ob_size);
 	printf("  trying string: %s\n", bytes->ob_sval);
 
 	if (((PyVarObject *)p)->ob_size > 10)
