@@ -3,7 +3,7 @@ def safe_print_list_integers(my_list=[], x=0):
     count = 0
     i = 0
     if not my_list:
-        return None
+        return 0
     while count < x:
         try:
             if type(my_list[i]) is int:
