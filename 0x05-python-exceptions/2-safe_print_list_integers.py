@@ -2,6 +2,9 @@
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
     i = 0
+    if not my_list:
+        print()
+        return 0
     while i < x:
         try:
             if type(my_list[i]) is int:
