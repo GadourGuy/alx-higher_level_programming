@@ -8,8 +8,8 @@ class Square:
             size (int): size of sqare
             position (int, int): position of square
         """
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
