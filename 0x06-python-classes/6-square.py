@@ -8,6 +8,7 @@ class Square:
 
     @property
     def size(self):
+        """ gets the size"""
         return self.__size
 
     @size.setter
@@ -20,6 +21,7 @@ class Square:
             raise ValueError("size must be >= 0")
     @property
     def position(self):
+        """gets the position"""
         return self.__position
     @position.setter
     def position(self, value):
