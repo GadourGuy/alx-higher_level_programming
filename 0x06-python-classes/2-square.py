@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """Square class that has size"""
 
+
 class Square:
     """defines a square"""
+
     def __init__(self, size=0):
         if isinstance(size, int) and size >= 0:
             self.__size = size
