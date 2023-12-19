@@ -27,9 +27,9 @@ class Node:
 
     @property
     def next_node(self):
-        """Get/set the next_node of the Node.""" 
+        """Get/set the next_node of the Node."""
         return (self.__next_node)
-    
+
     @next_node.setter
     def next_node(self, value):
         if not isinstance(value, Node) and value is not None:
@@ -42,13 +42,16 @@ class SinglyLinkedList:
 
     def __init__(self):
         """Initalize a new SinglyLinkedList."""
+
         self.__head = None
+
     def sorted_insert(self, value):
         """Insert a new Node to the SinglyLinkedList.
         the node is ensrted.
         Args:
         value (node): the new node to insert.
         """
+
         new_node = Node(value)
         if self.__head is None or self.__head.data > value:
             new_node.next_node = self.__head
@@ -59,8 +62,10 @@ class SinglyLinkedList:
                 tmp = tmp.next_node
             new_node.next_node = tmp.next_node
             tmp.next_node = new_node
+
     def __str__(self):
         """Define the print() representaion"""
+
         values = []
         tmp = self.__head
         while tmp is not None:
