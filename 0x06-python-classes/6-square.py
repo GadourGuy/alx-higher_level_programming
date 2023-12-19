@@ -3,10 +3,10 @@ class Square:
     """defines a square"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """initialize a new square
+        """initialize a new square.
         Args:
-            size (int): size of sqare
-            position (int, int): position of square
+            size (int): size of sqare.
+            position (int, int): position of square.
         """
         self.size = size
         self.position = position
