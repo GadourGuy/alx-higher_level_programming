@@ -3,12 +3,12 @@
 
 
 class MyInt(int):
-"""Class MyInt that inhertied int"""
+    """Class MyInt that inhertied int"""
 
     def __eq__(self, other):
         """Equale compare"""
-            return False
+            return self.real != other
 
     def __ne__(self, other):
         """Not Equale compare"""
-            return True
+            return self.real == other
