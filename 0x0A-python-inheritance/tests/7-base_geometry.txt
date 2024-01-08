@@ -1,28 +1,28 @@
-========================
-BaseGeometry Test cases
-========================
+The ``7-base_geometry`` module
+==============================
 
-::Adding the module
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Using ``BaseGeometry``
+----------------------
 
-normal class:
-
->>> bg = BaseGeometry()
-    >>> bg.integer_validator("name", 5)
+Importing class from the module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
+Trying to print the area
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+    	      ...
+    Exception: area() is not implemented
 
-Trying area:
->>> BaseGeometry.area()
-Traceback (most recent call last):
-...
-Exception: area() is not implemented
 
-	both wrong:
->>> BaseGeometry.integer_validator("hey", "rrrr")
-Traceback (most recent call last):
-...
-TypeError: hey must be an integer
+Trying to pass a non-integer argument
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", "5")
+    Traceback (most recent call last):
+    	      ...
+    TypeError: name must be an integer
+
 
 Trying to pass a boolean value
     >>> bg = BaseGeometry()
@@ -31,10 +31,27 @@ Trying to pass a boolean value
     	      ...
     TypeError: name must be an integer
 
->>> BaseGeometry.integer_validator("hey", -1)
-Traceback (most recent call last):
-...
-ValueError: hey must be greater than 0
+
+Trying to pass a negative value
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", -5)
+    Traceback (most recent call last):
+    	      ...
+    ValueError: name must be greater than 0
+
+
+Trying to pass a zero value
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 0)
+    Traceback (most recent call last):
+    	      ...
+    ValueError: name must be greater than 0
+
+
+Passing a positive value
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 5)
+
 
 Passing one argument to integer_validator
     >>> bg = BaseGeometry()
@@ -96,3 +113,10 @@ Passing dict to method
               ...
     TypeError: age must be an integer
 
+
+Passing None to method
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", None)
+    Traceback (most recent call last):
+              ...
+    TypeError: age must be an integer
