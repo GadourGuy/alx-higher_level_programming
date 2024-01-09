@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Module for creating student class”"""
-import json
-import sys
 
 
 class Student:
