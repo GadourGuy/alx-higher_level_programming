@@ -85,16 +85,16 @@ class Rectangle(Base):
 
     def display(self):
         """Print the Rectangle using the `#` character."""
-        vertcal = self.__y
-        while vertcal != 0:
-            print()
-            vertcal -= 1
-        for i in range(self.__width):
-            for k in range(self.__x):
-                print(" ", end="")
-            for j in range(self.__height):
-                print("#", end="")
-            print()
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
+
 
     def update(self, *args, **kwargs):
         """Updating the rectangle"""
