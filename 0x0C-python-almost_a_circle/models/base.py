@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Module for almost a circle project"""
 import json
 import csv
@@ -6,7 +7,13 @@ import turtle
 
 
 class Base():
-    """Base class"""
+    """Base class
+
+    This Represents the "base" for all other classes in project 0x0C*.
+
+    Private Class Attributes:
+        __nb_object (int): Number of instantiated Bases.
+    """
 
     __nb_objects = 0
 
@@ -108,6 +115,7 @@ class Base():
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
     @staticmethod
     def draw(list_rectangles, list_squares):
         """Draw Rectangles and Squares using the turtle module.
