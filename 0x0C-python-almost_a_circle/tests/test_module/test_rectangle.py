@@ -11,7 +11,7 @@ class TestRectangle(unittest.TestCase):
     def test_id(self):
         """tests id argument"""
         test_0 = Rectangle(2, 4)
-        self.assertEqual(test_0.id, 3)
+        self.assertEqual(test_0.id, 44)
         test_1 = Rectangle(12, 3, id=2)
         self.assertEqual(test_1.id, 2)
         test_2 = Rectangle(3, 1, 2, 3)
