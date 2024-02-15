@@ -1,2 +1,2 @@
--- creating a database
-CREATE DATABASE IF NOT EXISTS `hbtn_0c_0`;
+-- deleting a DATABASE
+DROP DATABASE IF EXISTS `hbtn_0c_0`;
