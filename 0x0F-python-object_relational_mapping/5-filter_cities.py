@@ -12,10 +12,7 @@ if __name__ == "__main__":
     cur.execute("""SELECT cities.id, cities.name, states.name FROM cities
                 INNER JOIN states ON states.id=cities.state_id WHERE states.name=%s""", (match,))
     rows = cur.fetchall()
-    for index, row in enumerate(rows):
-        if index == len(rows) - 1:
-            print(row[1])
-        else:
-            print("{}, ".format(row[1]), end="")
+    tmp = list(row[0] for row in rows)
+    print(*tmp, sep=", ")
     cur.close()
     db.close()
