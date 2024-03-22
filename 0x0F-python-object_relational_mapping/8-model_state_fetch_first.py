@@ -13,4 +13,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     result = session.query(State).filter(State.id == 1).first()
-    print("{}: {}".format(result.id, result.name))
+    if result:
+        print("{}: {}".format(result.id, result.name))
+    else:
+        print("Nothing")
