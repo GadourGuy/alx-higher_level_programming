@@ -7,9 +7,10 @@ from sqlalchemy import Column, Integer, String, MetaData
 mymetadata = MetaData()
 Base = declarative_base(metadata=mymetadata)
 
-class State(Base):
-	"""state class with id attribute"""
 
-	__tablename__ = 'states'
-	id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
-	name = Column(String(128), nullable=False)
+class State(Base):
+    """state class with id attribute"""
+
+    __tablename__ = 'states'
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    name = Column(String(128), nullable=False)
