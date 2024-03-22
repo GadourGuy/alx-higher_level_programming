@@ -17,4 +17,3 @@ if __name__ == "__main__":
     result = session.query(State).filter_by(name='Louisiana').first()
     print(result.id)
     session.commit()
-    
