@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a code that tells you the status of your url"""
+"""fetches https://intranet.hbtn.io/status."""
 import requests
 
 
